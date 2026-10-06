@@ -1,0 +1,11 @@
+# G5: a run in a repository outside the FI GitHub connection's scope.
+name: CI
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "repository B is outside the connection scope"
